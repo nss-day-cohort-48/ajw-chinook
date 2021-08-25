@@ -1,6 +1,6 @@
 Provide a query that shows each Invoice line item, with the name of the track that was purchase, and the name of the artist.
 
-SELECT DISTINCT track.name, invoicelineid, artist.name
+SELECT DISTINCT invoicelineid, track.name AS TrackName,  artist.name AS Artist
 FROM InvoiceLine
 JOIN Track
 ON invoiceline.trackid = track.trackid
